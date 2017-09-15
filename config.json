@@ -1,0 +1,65 @@
+{
+	"name": "Log Viewer",
+
+	"namespace":"Stanford\\LogViewerModule",
+
+	"description": "A super-user tool to view log files with live updates.  Available in the control center for super-users, it can also be configured for per-project log files.  Care should be exercised to control the files viewed",
+
+	"versions": [
+		{ "0.1": "Initial Development Version" },
+		{ "0.3": "Cleaned up and actually working" }
+	],
+
+	"authors": [
+		{
+			"name": "Andy Martin",
+			"email": "andy123@stanford.edu",
+			"institution": "Stanford University"
+		}
+	],
+
+	"permissions": [
+		"hook_control_center",
+		"Read and display server files"
+	],
+
+	"links": {
+		"control-center": [
+			{
+				"name": "View Log Files",
+				"icon": "gear",
+				"url": "system_viewer.php",
+				"class": "log-viewer-module"
+			}
+		],
+		"project": [
+		]
+	},
+
+	"system-settings": [
+		{
+			"key": "include-php-error-log",
+			"name": "Include the PHP Error Log",
+			"required": false,
+			"allow-project-overrides": false,
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"key": "path",
+			"name": "Enter path to log file:",
+			"required": false,
+			"type": "text",
+			"repeatable": true
+		}
+	],
+	
+	"project-settings": [
+		{
+			"key": "field",
+			"name": "Select a field:",
+			"type":"field-list",
+			"repeatable":true
+		}
+	]
+}

@@ -1,0 +1,112 @@
+#pagecontainer {
+    max-width: none !important;
+}
+
+
+.log-viewer-wrapper {
+    margin-bottom: 10px;
+    border: 2px solid #eee;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.log-viewer-wrapper .title {
+    font-family: Menlo,Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-weight: bold;
+    padding: 3pt;
+    margin: 3pt 0;
+    /*border-top: 2px solid #ccc;*/
+    /*border-bottom: 2px solid #ccc;*/
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+.log-viewer-wrapper .controls {
+    display: inline-block;
+}
+
+.log-viewer-wrapper .controls button {
+    background-color: #aaa;
+    display:inline-block;
+    color: #fff !important;
+}
+
+.log-viewer-wrapper .controls button.enabled {
+    background-color: #8C1515;
+}
+
+.log-viewer-wrapper .controls button:hover {
+    border: 1px solid black;
+}
+
+
+
+
+.dataTables_wrapper .dataTables_filter {
+    float:left;
+}
+
+.dataTables_wrapper .dataTables_filter label {
+    margin-left: 10px;
+}
+
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody td {
+    vertical-align: top !important;
+}
+
+
+
+.log-viewer-wrapper table.dataTable thead th {
+    padding: 1px 20px 0 1px;
+    background-color: #222;
+    text-align:left;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+
+.log-viewer-wrapper .log-table td
+{
+    color: white;
+    /*background-color: blue;*/
+    font-size: 10px;
+    font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+    /*word-break: break-all;*/
+    /*word-wrap: break-word;*/
+    padding: 1px;
+    vertical-align: text-top;
+}
+
+.log-viewer-wrapper .log-table tr.odd td {
+    background-color: #000;
+}
+.log-viewer-wrapper .log-table tr.even td {
+    background-color: #333;
+}
+
+.log-viewer-wrapper table.dataTable tr.highlight td {
+    /*, .log-viewer-wrapper table.dataTable tr.highlight td div.log{*/
+    color:yellow !important;
+    background-color: #333;
+}
+
+div.rownum {
+    vertical-align: top;
+    height: 100%;
+    word-wrap: normal;
+}
+
+div.log {
+    padding: 0px;
+    font-size:inherit;
+    line-height:inherit;
+    border: none;
+    border-radius: 0;
+    /*color: white;*/
+    margin: 1px 0px;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
