@@ -51,7 +51,7 @@ class LogViewerModule extends  \ExternalModules\AbstractExternalModule
 			$name = $_POST['name'];
 			// $path = $_POST['path'];
 
-            \Plugin::log("This is a debug call for $name at $seek","DEBUG");
+            // \Plugin::log("This is a debug call for $name at $seek","DEBUG");
 
 			$index = array_search($name, $this->names);
 			if ($index === false) {
