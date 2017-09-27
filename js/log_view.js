@@ -194,14 +194,16 @@ function processLogTableClick() {
     }
 
     if (action == 'prune') {
+        console.log('prune click', this);
         var btn = $('button.prune',context);
         var status = $(btn).hasClass('enabled');
         if (status) {
+            // Disable
             $('button', btn.parent()).removeClass('enabled');
             deleteCookie(dt['prune-cookie']);
         } else {
             $('button', btn.parent()).addClass('enabled');
-            dt.prune = 500;
+            dt.prune = 250;
             setCookie(dt['prune-cookie'], dt.prune, 365);
         }
         // updateTimer(name);
@@ -209,6 +211,25 @@ function processLogTableClick() {
 
 
 }
+
+
+function updatePrune() {
+    var context = $(this).closest('div.log-viewer-wrapper');
+    var name = context.data('name');
+    var dt = logTables[name];
+
+    if (btn)
+
+        console.log(prune);
+    var prune = $(this).data('prune');
+    console.log(this,prune);
+
+    var badge = $('span.badge.prune-level', context).html(prune);
+
+    dt.prune = prune;
+    setCookie(dt['prune-cookie'], dt.prune, 365);
+}
+
 
 function updateRefreshInterval() {
     var refreshInterval = $(this).data('interval');
@@ -218,16 +239,6 @@ function updateRefreshInterval() {
         var dt = logTables[name];
         dt.refreshInterval = refreshInterval;
     }
-}
-
-function updatePrune() {
-    var prune = $(this).data('prune');
-    console.log(this,prune);
-    var context = $(this).closest('div.log-viewer-wrapper');
-    var name = context.data('name');
-    var dt = logTables[name];
-    dt.prune = prune;
-    setCookie(dt['prune-cookie'], dt.prune, 365);
 }
 
 

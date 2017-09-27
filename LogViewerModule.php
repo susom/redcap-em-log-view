@@ -153,16 +153,18 @@ class LogViewerModule extends  \ExternalModules\AbstractExternalModule
 					</div>
 
 					<div class='btn-group'>
-						<button type='button' class='btn btn-xs prune' data-action='prune'>Prune <span class='badge'></span></button>
- 						<button type='button' class='btn btn-xs dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+						<!--button type='button' class='btn btn-xs prune' data-action='prune'>Prune <span class='badge prune-level'>Off</span></button-->
+ 						<button type='button' class='btn btn-xs dropdown-toggle' data-action='prune' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+							<span>Prune Rows</span>
+							<span class='badge prune-level'>Off</span>
 							<span class='caret'></span>
 							<span class='sr-only'>Prune Dropdown</span>
 					  	</button>
 					  	<ul class='dropdown-menu'>
-							<li><a href='javascript:' class='prune' data-prune='all'>All Records</a></li>
-							<li><a href='javascript:' class='prune' data-prune='100'>100</a></li>
-							<li><a href='javascript:' class='prune' data-prune='500'>500</a></li>
-							<li><a href='javascript:' class='prune' data-prune='1000'>1000</a></li>
+							<li><a href='javascript:' class='prune' data-prune='off'>Off (show full file)</a></li>
+							<li><a href='javascript:' class='prune' data-prune='1000'>Last 1000 lines</a></li>
+							<li><a href='javascript:' class='prune' data-prune='500'>Last 500 lines</a></li>
+							<li><a href='javascript:' class='prune' data-prune='100'>Last 100 lines (default)</a></li>
 						</ul>
 					</div>
 		
